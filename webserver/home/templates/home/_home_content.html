@@ -8,7 +8,19 @@
       </div>
       <div class="panel-body text-center">
         {# Flip Clock counting down to next MegaMinerAI #}
-        <h1>{{ next_competition.start_time|timeuntil }}</h1>
+        <div class="clock" style="margin:2em;"></div>
+		<script type="text/javascript">
+		 var clock;
+		 $(document).ready(function() {
+		  // Put in the date you want to countdown here
+		  var diff = new Date('March 27, 2015')
+		  clock = $('.clock').FlipClock(diff, {
+		   clockFace: 'DailyCounter',
+		   countdown: true, 
+           showSeconds: true
+		  });
+		 });
+		</script>
       </div>
     </div>
   </div>
